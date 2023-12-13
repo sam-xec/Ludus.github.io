@@ -109,3 +109,8 @@ button img{
 
 }
 .player:hover  {background-color: #a23c05}
+@media (max-width:450px)  {
+ body{
+    background-color: #f44336;
+ } 
+}
