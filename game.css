@@ -1,0 +1,111 @@
+/* game.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:rgb(112, 88, 78,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 9px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Additional Styles for Different Buttons */
+#rock-button {
+    background-color: #f44336; /* Red */
+}
+
+#paper-button {
+    background-color: #008CBA; /* Blue */
+}
+
+#scissor-button {
+    background-color: #f4c242; /* Yellow */
+}
+
+button img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.result{
+    height: 100px;
+    width: 220px;
+    color: aliceblue;
+    margin-top: 50px;
+    background-color: #666;
+    border-radius: 1rem;
+    border: none;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bolder;
+    padding: 20px 20px;
+    box-shadow: 0 9px #999;
+}
+.computerMove{
+    height: 100px;
+    width: 250px;
+    color: aliceblue;
+    margin-top: 50px;
+    background-color: #666;
+    border-radius: 1rem;
+    border: none;
+    text-align: center;
+    font-size: 21px;
+    font-weight: bolder;
+    padding: 20px 0px;
+    position: absolute;
+    left: 150px;
+    box-shadow: 0 9px #999;
+}
+.player{
+    height: 100px;
+    width: 220px;
+    color: aliceblue;
+    margin-top: 50px;
+    background-color: #666;
+    border-radius: 1rem;
+    border: none;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bolder;
+    padding: 20px 20px;
+    position: absolute;
+    left: 1250px;
+
+}
+.player:hover  {background-color: #a23c05}
