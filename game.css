@@ -1,4 +1,4 @@
-/* game.css */
+/* game.css - Professional and Responsive Design */
 
 /* Basic Reset */
 * {
@@ -7,110 +7,89 @@
     box-sizing: border-box;
 }
 
+/* Body and Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color:rgb(112, 88, 78,0.8);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     text-align: center;
-    backdrop-filter: blur(20px);
-    
 }
 
+/* Button Styles */
 button {
-    background-color: #4CAF50; /* Green */
-    border: none;
+    background-color: #4CAF50; /* Default Green */
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
     cursor: pointer;
-    border-radius: 12px;
-    box-shadow: 0 9px #999;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-button:hover {background-color: #3e8e41}
+button:hover {
+    background-color: #3e8e41;
+}
 
 button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+    transform: scale(0.95);
 }
 
-/* Additional Styles for Different Buttons */
-#rock-button {
-    background-color: #f44336; /* Red */
-}
+/* Specific Button Colors */
+#rock-button { background-color: #f44336; } /* Red */
+#paper-button { background-color: #008CBA; } /* Blue */
+#scissor-button { background-color: #f4c242; } /* Yellow */
 
-#paper-button {
-    background-color: #008CBA; /* Blue */
-}
-
-#scissor-button {
-    background-color: #f4c242; /* Yellow */
-}
-
-button img{
-    width: 200px;
-    height: 200px;
+/* Image Styles */
+button img {
+    width: 100px;
+    height: 100px;
     object-fit: cover;
 }
 
-.result{
-    height: 100px;
-    width: 220px;
-    color: aliceblue;
-    margin-top: 50px;
+/* Result Box Styles */
+.result, .computerMove, .player {
     background-color: #666;
-    border-radius: 1rem;
-    border: none;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bolder;
-    padding: 20px 20px;
-    box-shadow: 0 9px #999;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 350px;
 }
-.computerMove{
-    height: 100px;
-    width: 250px;
-    color: aliceblue;
-    margin-top: 50px;
-    background-color: #666;
-    border-radius: 1rem;
-    border: none;
-    text-align: center;
-    font-size: 21px;
-    font-weight: bolder;
-    padding: 20px 0px;
-    position: absolute;
-    left: 150px;
-    box-shadow: 0 9px #999;
-}
-.player{
-    height: 100px;
-    width: 220px;
-    color: aliceblue;
-    margin-top: 50px;
-    background-color: #666;
-    border-radius: 1rem;
-    border: none;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bolder;
-    padding: 20px 20px;
-    position: absolute;
-    left: 1250px;
 
+/* Hover Effect for Player Box */
+.player:hover {
+    background-color: #555;
 }
-.player:hover  {background-color: #a23c05}
-@media (max-width:450px)  {
- body{
-    background-color: #f44336;
- } 
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    button, .result, .computerMove, .player {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    button img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        background-color: #f44336;
+    }
+
+    button, .result, .computerMove, .player {
+        font-size: 0.9rem;
+    }
 }
